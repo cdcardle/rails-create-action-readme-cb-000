@@ -87,3 +87,22 @@ Completed 302 Found in 49ms (ActiveRecord: 39.7ms)
 Started GET "/posts/3" for 68.40.63.148 at 2018-05-17 16:00:33 +0000
 Processing by PostsController#show as HTML
   Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 52ms (Views: 26.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 68.40.63.148 at 2018-05-17 16:00:51 +0000
+Processing by PostsController#new as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2018-05-17 16:00:51.938354"], ["updated_at", "2018-05-17 16:00:51.938354"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://67.205.188.72:36217/posts/4
+Completed 302 Found in 7ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/posts/4" for 68.40.63.148 at 2018-05-17 16:00:51 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
